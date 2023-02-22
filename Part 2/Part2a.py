@@ -19,6 +19,6 @@ df = spark.read.load("hdfs://172.31.47.167:9000/export.csv", format = 'csv', inf
 df1 = df.sort('cca2', 'timestamp')
 
 #Saves the sorted file as a csv
-df1.write.format("csv").save("hdfs://172.31.47.167:9000/new")
+df1.write.format("csv").save("hdfs://172.31.47.167:9000/new.csv")
 
 spark.stop()
